@@ -1,0 +1,186 @@
+body {
+  font-family: "Poppins", sans-serif;
+  color: #000000;
+  height: 1200px;
+}
+
+/* Navbar.css */
+.navbar-container {
+  background-color: #010101;
+  width: 100%;
+  border-bottom: 2px solid #ffffff;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  /* padding: 10px; */
+}
+
+.logo {
+  max-width: 200px; /* Atur lebar maksimum gambar */
+  height: auto; /* Gambar akan menyesuaikan tingginya */
+  margin-right: 10px;
+}
+
+.navbar-text {
+  font-size: 50px;
+  color: #fff;
+  /* Ukuran teks */
+}
+
+.navbar-text span {
+  font-size: 50px;
+  color: #a48d60;
+  /* Ukuran teks */
+}
+
+.field-container {
+  /* background-color: #a48d60; */
+  padding: 20px;
+  width: 70%;
+  height: 240px;
+  justify-content: center; /* Memusatkan div di tengah horizontal */
+  align-items: center; /* Memusatkan div di tengah vertikal */
+  margin: auto;
+}
+
+.field h1 {
+  font-size: 20px;
+}
+
+.field-name {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.field-name input {
+  border-radius: 3px;
+  border-color: #000000;
+}
+
+.field-item-container h1 {
+  font-size: 20px;
+}
+
+.dropdown-item{
+  border-radius: 200px;
+  padding: 3px;
+  margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    max-width: 100%;
+  }
+  /* Atur tampilan responsif ketika lebar layar kurang dari atau sama dengan 768px */
+  .logo {
+    max-width: 200px; /* Mengurangi ukuran gambar pada layar kecil */
+  }
+
+  .navbar-text {
+    font-size: 25px; /* Mengurangi ukuran teks pada layar kecil */
+  }
+  .navbar-text span {
+    font-size: 25px; /* Mengurangi ukuran teks pada layar kecil */
+  }
+
+  .text-overlay {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    color: white;
+  }
+  .text-overlay h1 {
+    font-size: 20px;
+  }
+  .text-overlay p {
+    font-style: italic;
+    font-size: 12px;
+  }
+  .menu-container {
+    width: calc(50% - 20px); /* 2 kolom pada tampilan lebih kecil */
+  }
+  .menu .row .menu-card img {
+    border-radius: 50%;
+    width: 80%;
+    height: 40%;
+  }
+}
+
+
+
+.kasir-container span{
+  color: #a48d60;
+}
+
+.kasir-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.input-container {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-container input,
+.input-container select,
+.input-container button {
+  margin-right: 10px;
+}
+
+.order-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin: 5px 0;
+}
+
+.total-container button {
+  background-color: #007acc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.total-container button:hover {
+  background-color: #005b9f;
+}
+
+
+@media (max-width: 450px) {
+  .menu-container {
+    width: calc(50% - 20px); /* 2 kolom pada tampilan lebih kecil */
+  }
+  .menu .row .menu-card img {
+    border-radius: 50%;
+    width: 100%;
+    /* height: 40%; */
+  }
+
+  .menu .row .menu-card-title {
+    font-size: 12px;
+  }
+  .menu .row .menu-card-price {
+    font-size: 14px;
+  }
+  .menu .row .menu-card {
+    text-align: center;
+    /* border: 1px solid #ddd; */
+    padding: 10px;
+    width: 100px;
+  }
+}
