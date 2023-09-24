@@ -22,6 +22,18 @@ body {
   height: auto; /* Gambar akan menyesuaikan tingginya */
   margin-right: 10px;
 }
+.menu-card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Membagi tiga kolom dengan lebar yang sama */
+  gap: 20px; /* Jarak antar card */
+  
+}
+
+.menu-card-item {
+  display: flex;
+  flex-direction: column;
+
+}
 
 .navbar-text {
   font-size: 50px;

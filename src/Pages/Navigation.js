@@ -1,36 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
-import Container from "react-bootstrap/Container";
 import logo from "../assets/logo.png";
 import globalCss from "../assets/global.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import {Nav, Navbar, NavDropdown, Container } from 'react-bootstrap'
 
 export default function Navigation() {
   return (
-    <Navbar
-      // collapseOnSelect
-      expand="lg"
-      bg="black"
-      variant="dark"
-      className="p-4"
-    >
-      <Container
-      >
-        <Navbar.Brand>
-          <div className="navbar">
-                
-            <img src={logo} alt="Logo" className="logo" />
-            <h1
-              className="navbar-text"
-              style={{color:"white"}}
-            >
-              Barista<span>Brew</span>
-            </h1>
-          </div>
-        </Navbar.Brand>
-        {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+    <>
+
+    <Navbar variant="white" expand="lg" style={{backgroundColor:"black",}}>
+      <Container >
+      <img src={logo} alt="Logo" className="logo" />
+      <Navbar.Brand href="#home" style={{color:"#a48d60", fontSize:30}}><strong style={{color:"white"}}>Barista</strong> Brew</Navbar.Brand>
+      {/* <Navbar.Toggle aria-controls="basic-navbar-nav" /> */}
+      <Navbar.Collapse id="basic-navbar-nav" style={{color:"white"}}>
+        {/* <Nav className="mr-auto" >
+          <Nav.Link href="/" style={{color:"white"}}>Makanan</Nav.Link>
+          <Nav.Link href="#link" style={{color:"white"}}>Minuman</Nav.Link>
+          <Nav.Link href="ListOrder" style={{color:"white"}}>List Order</Nav.Link>
+          
+        </Nav> */}
+      </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
+              </>
+
+);
 }
