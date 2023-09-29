@@ -13,7 +13,7 @@ import {
 } from "firebase/database";
 import QR from "../assets/qris_page-0001.jpg";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom"; // Import untuk navigasi
-import { Card, Button, Col, Row, Container } from "react-bootstrap"; // Import komponen Card dan Button
+import { Card, Button, Col, Row, Container, Alert } from "react-bootstrap"; // Import komponen Card dan Button
 import ListCategory from "./ListCategory";
 import Hasil from "./Hasil";
 
@@ -33,9 +33,10 @@ function Kasir() {
     { name: "Pandan Latte", price: 28000 },
     { name: "Caramel Latte", price: 28000 },
     { name: "Vanilla Latte", price: 28000 },
-    { name: "Pocari Sweat", price: 7000 },
+    { name: "Pocari Sweat", price: 7500 },
     { name: "Infused Water Mix Fruits", price: 7000 },
     { name: "Infused Lemon Tea", price: 7000 },
+    { name: "Aqua 330 ML", price: 3000 },
   ];
 
   const foods = [
@@ -45,6 +46,8 @@ function Kasir() {
     { name: "Bawang Goreng", price: 35000 },
     { name: "Bubur Kacang Hijau", price: 10000 },
     { name: "Lontong", price: 5000 },
+    { name: "Fla Puding", price: 1000 },
+    { name: "Kerupuk Putih", price: 2000 },
   ];
 
   const additionalItems = [
@@ -240,7 +243,7 @@ function Kasir() {
     for (const order of orders) {
       total += order.price;
     }
-
+   
     // Mendapatkan waktu pemesanan saat ini
     const currentTime = new Date().toLocaleString();
 
@@ -263,6 +266,8 @@ function Kasir() {
     });
     // Menyimpan data pesanan ke Firebase
     setTotalPrice(total);
+    alert("Order Succeed Added");
+
   };
 
   const handleDone = () => {
