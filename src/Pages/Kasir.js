@@ -34,8 +34,6 @@ function Kasir() {
     { name: "Caramel Latte", price: 28000 },
     { name: "Vanilla Latte", price: 28000 },
     { name: "Pocari Sweat", price: 7500 },
-    { name: "Infused Water Mix Fruits", price: 7000 },
-    { name: "Infused Lemon Tea", price: 7000 },
     { name: "Aqua 330 ML", price: 3000 },
   ];
 
